@@ -16,12 +16,12 @@
             <button class="button-white">Reserve Now</button>
         </div>
         <div class="MainLandingPage background">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture1.png')}}" alt="">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture2.png')}}" alt="">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture3.png')}}" alt="">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture4.png')}}" alt="">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture5.png')}}" alt="">
-            <img src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture6.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture1.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture2.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture3.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture4.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture5.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture6.png')}}" alt="">
         </div>
     </div>
     <div class="AboutSection">
@@ -100,5 +100,7 @@
         <button class="button-white">Reserve Now</button>
     </div>
     @include('components.footer');
+
+    <script src="{{asset('js/test.js')}}"></script>
 </body>
 </html>

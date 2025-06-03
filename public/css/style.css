@@ -10,6 +10,7 @@ body{
 }
 
 #mainNavbar{
+    display: inline-block;
     background-color: #022D28;
     padding: 15px 0;
     box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
@@ -17,7 +18,7 @@ body{
     position: fixed;
     top: 0px;
     transition: top 0.3s ease-in-out;
-    width: 100%;
+    width: 100vw;
 }
 
 @font-face {
@@ -48,8 +49,8 @@ body{
 h1{
     color: white;
     font-family: 'lovelace-bold';
-    font-size: 3.646vw;
-    line-height: 4.2vw;
+    font-size: 4.3vw;
+    line-height: 4.3vw;
 }
 
 h2{
@@ -75,11 +76,11 @@ p{
 .button-white{
     color: #023B35;
     font-family: 'lovelace-regular';
-    font-size: 1.25vw;
+    font-size: 18px;
 
-    border-radius: 1.389vw;
     background-color: #f8fff9;
-    padding: 0.903vw 1.597vw;
+    border-radius: 20px;
+    padding: 13px 23px;
 }
 
 .button-inverted-green{
@@ -99,6 +100,7 @@ p{
     flex-direction: row;
     align-items: center;
     gap: 45px;
+    width: 100%;
 }
 
 .logo{
@@ -111,24 +113,29 @@ p{
     max-height: 90%;
 }
 
+.nav-link{
+    display: flex;
+    flex-direction: row;
+    gap: 2.778vw;
+}
+
 .nav-link a{
-    margin-right: 40px;
     font-family: 'lovelace-regular';
     color: #ffffff;
     text-decoration: none;
 }
 
 .body-margin{
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
 }
 
 /* Main Landing Page */
 
 .MainLandingPage{
-    margin-top: 120px;
-    margin-left: 26px;
-    margin-right: 26px;
+    margin-top: 8vw;
+    margin-left: 1.806vw;
+    margin-right: 1.806vw;
     position: relative;
     z-index: 0;
 }
@@ -153,7 +160,7 @@ p{
 .MainLandingPage.background{
     display:flex;
     overflow: hidden;
-    gap: 16px;
+    gap: 1.111vw;
     z-index: 0;
 }
 
@@ -162,20 +169,29 @@ p{
     height: auto;
     flex: 1;
     display: block;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.MainLandingPage.background img.is-visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* About Section */
 
 .AboutSection{
     height: max-content;
-    width: 100%;
+    width: 100vw;
     background-color: #f8fff9;
 }
 
 .box-wrapper-description{
-    padding-top: 80px;
+    padding-top: 5.556vw;
     display: flex;
-    gap: 181px;
+    gap: 12.569vw;
     flex-direction: row;
     justify-content: center;
     height: max-content;
@@ -183,9 +199,9 @@ p{
 
 .box-description{
     display: grid;
-    gap: 24px;
+    gap: 1.667vw;
     text-align: center;
-    width: 384px;
+    width: 26.667vw;
 }
 
 .box-wrapper-quote{
@@ -197,13 +213,13 @@ p{
 }
 
 .box-wrapper-quote img{
-    width: 250px;
+    width: 17.361vw;
     height: auto;
     display: block;
 }
 
 .box-wrapper-text{
-    max-width: 360px;
+    max-width: 25vw;
     display: grid;
     align-items: center;
 }
@@ -211,7 +227,8 @@ p{
 .box-wrapper-text h3{
     font-family: 'aileron-light-italic';
     font-weight: 50;
-    font-size: 28px;
+    line-height: 2.431vw;
+    font-size: 1.944vw;
     align-items: end;
 }
 
@@ -230,7 +247,7 @@ p{
     margin-top: 85px;
     padding-bottom: 50px;
     justify-content: center;
-    gap: 50px;
+    gap: 3.472vw;
 }
 
 .box-wrapper-menu h3{
@@ -349,7 +366,7 @@ p{
 .contact-us{
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 20.833vw;
     background-color: #022D28;
     justify-content: center;
     align-items: center;    
@@ -531,4 +548,490 @@ input[type=email] {
 .footer-references-hyperlink a{
     margin-left: 20px;
     margin-bottom: 0px;
+}
+
+/* Extra Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .body-margin {
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+}
+
+/* Large devices (des desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px){
+
+    h3{
+        font-size: 27;
+        line-height: 29px;
+    }
+
+    .button-white {
+        font-size: 1.4vw;
+        padding: 1vw 1.8vw;
+    }
+
+    .nav {
+        gap: 30px;
+        width: 95%;
+    }
+
+    .nav-link{
+        max-width: max-content;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-right: 25px;
+    }
+
+    .body-margin {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .box-wrapper-description {
+        gap: 80px;
+    }
+
+    .box-description {
+        width: 300px;
+    }
+
+    .box-wrapper-quote {
+        gap: 50px;
+    }
+
+    .box-wrapper-quote img {
+        width: 200px;
+    }
+
+    .box-wrapper-text {
+        max-width: 300px;
+    }
+
+    .box-wrapper-text h3{
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .our_menu_grid_image {
+        grid-template-rows: repeat(12, 5.3vw); /* Adjust row height */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    h3 {
+        font-size: 23;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    #mainNavbar {
+        padding: 10px 0;
+    }
+
+    .nav{
+        justify-content: center;
+        flex-direction: row; /* Stack logo and nav links */
+        gap: 15px;
+    }
+
+    .nav-link {
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: center;
+        gap: 20px;
+        margin-left: 0; /* Remove auto margin */
+    }
+
+    .MainlandingPage {
+        margin-top: 15vw; /* Adjust top margin for smaller screens */
+    }
+
+    .box-wrapper-description {
+        flex-direction: row; /* Stack descriptions */
+        gap: 40px;
+        padding-top: 50px;
+        overflow-x: auto;
+    }
+
+    .box-description {
+        width: 80%; /* Wider on smaller screens */
+        margin: 0 auto; /* Center individual description boxes */
+    }
+
+    .box-wrapper-quote {
+        flex-direction: row; /* Stack image and text */
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .box-wrapper-quote img {
+        width: 150px;
+        height: auto;
+    }
+
+    .box-wrapper-text h3{
+        font-size: 23px;
+        line-height: 23px;
+    }
+
+    .box-wrapper-text {
+        max-width: 50%;
+    }
+
+    .box-wrapper-menu h3{
+        font-size: 30px;
+    }
+
+    .our_menu_grid_image {
+        grid-template-columns: repeat(6, 1fr); /* More columns for wider items */
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); /* Auto row height */
+        grid-gap: 15px;
+
+        /* Re-mapping grid items for a simpler tablet layout */
+        .grid_item1 { grid-area: 1 / 1 / 4 / 4; } /* row-start / col-start / row-end / col-end */
+        .grid_item2 { grid-area: 1 / 4 / 3 / 7; }
+        .grid_item3 { grid-area: 4 / 1 / 7 / 4; }
+        .grid_item4 { grid-area: 3 / 4 / 6 / 7; }
+        .grid_item5 { grid-area: 7 / 1 / 9 / 3; }
+        .grid_item6 { grid-area: 6 / 4 / 9 / 7; }
+        .grid_item7 { grid-area: 9 / 1 / 12 / 4; display: none;}
+        .grid_item8 { grid-area: 9 / 4 / 12 / 7; display: none;}
+        .grid_item9 { grid-area: 7 / 3 / 9 / 5; display: none;}
+        .grid_item10 { grid-area: 1 / 7 / 3 / 9; display: none; } /* Hide some for simplicity if needed */
+        .grid_item11 { grid-area: 3 / 7 / 5 / 9; display: none; }
+        .grid_item12 { grid-area: 5 / 7 / 7 / 9; display: none; }
+    }
+
+    .footer{
+        align-items: center;
+    }
+
+    .footer-group{
+        align-items: center;
+    }
+
+    .footer-block-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer-redirects {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .MainPageEmail {
+        width: 80%; /* Fluid width */
+        max-width: 300px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    h1 {
+        font-size: 5vw;
+        line-height: 5.5vw;
+    }
+
+    h2 {
+        font-size: 4.5vw;
+        line-height: 5.5vw;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 95%;
+    }
+
+    .nav-link {
+        flex-direction: column; /* Stack nav links */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .body-margin {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .MainlandingPage {
+        margin-top: 20vw;
+    }
+
+    .MainLandingPage.background img {
+        width: 0; /* Hide some images to simplify the layout */
+        flex: 0; /* Remove flex contribution */
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) { /* Show only the first 3 images */
+            width: 100%;
+            flex: 1;
+        }
+    }
+
+    .box-wrapper-description {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 30px;
+    }
+
+    .box-description {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .box-wrapper-quote {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .box-wrapper-quote img {
+        width: 150px;
+    }
+
+    .box-wrapper-text {
+        max-width: 90%;
+    }
+
+    .our_menu_grid_image {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for a more mobile-friendly grid */
+        grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+
+        /* Re-mapping grid items for mobile */
+        .grid_item1 { grid-area: 1 / 1 / 3 / 2; }
+        .grid_item2 { grid-area: 1 / 2 / 2 / 3; }
+        .grid_item3 { grid-area: 3 / 1 / 5 / 2; }
+        .grid_item4 { grid-area: 2 / 2 / 4 / 3; }
+        .grid_item5 { grid-area: 5 / 1 / 6 / 2; }
+        .grid_item6 { grid-area: 4 / 2 / 6 / 3; }
+        .grid_item7 { grid-area: 6 / 1 / 8 / 2; }
+        .grid_item8 { grid-area: 6 / 2 / 8 / 3; }
+        /* Hide remaining items or rearrange as needed */
+        .grid_item9, .grid_item10, .grid_item11, .grid_item12 {
+            display: none;
+        }
+    }
+
+    .footer-block-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-redirects {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .MainPageEmail {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .footer-references {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-references-hyperlink a {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+    h1 {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+        line-height: 7vw;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .button-white {
+        font-size: 3vw;
+        padding: 2vw 3vw;
+    }
+
+    #mainNavbar {
+        padding: 8px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .body-margin {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .MainlandingPage {
+        margin-top: 25vw;
+    }
+
+    .MainLandingPage.background img {
+        display: none; /* Hide all background images on very small screens */
+    }
+
+    .MainLandingPage.text-button {
+        gap: 10px;
+    }
+
+    .box-wrapper-description {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .box-description {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 10px; /* Add internal padding */
+    }
+
+    .box-wrapper-quote {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .box-wrapper-quote img {
+        width: 120px;
+    }
+
+    .box-wrapper-text {
+        max-width: 95%;
+    }
+
+    .box-wrapper-text h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .box-wrapper-text h5 {
+        font-size: 14px;
+    }
+
+    .box-wrapper-menu {
+        margin-top: 40px;
+        padding-bottom: 30px;
+        gap: 30px;
+    }
+
+    .box-wrapper-menu h3 {
+        font-size: 30px;
+    }
+
+    .our_menu_grid_image {
+        grid-template-columns: 1fr; /* Single column layout for most mobile */
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 8px;
+
+        /* All grid items stacked vertically */
+        .grid_item1, .grid_item2, .grid_item3, .grid_item4, .grid_item5,
+        .grid_item6, .grid_item7, .grid_item8, .grid_item9, .grid_item10,
+        .grid_item11, .grid_item12 {
+            grid-area: auto / auto / auto / auto; /* Reset grid area for stacking */
+            display: block; /* Ensure all are visible */
+        }
+        /* You might want to hide some images if there are too many for a single column */
+        .grid_item5, .grid_item6, .grid_item9, .grid_item10, .grid_item11, .grid_item12 {
+            display: none; /* Example: hide some to reduce vertical scroll */
+        }
+    }
+
+    .contact-us {
+        height: 200px;
+        gap: 15px;
+    }
+
+    .contact-us h2 {
+        font-size: 5vw;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-block-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-redirects {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .MainPageEmail {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .mainPageSubmit {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .footer-references {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-references-hyperlink a {
+        margin-left: 0;
+        display: block; /* Stack links */
+    }
 }
