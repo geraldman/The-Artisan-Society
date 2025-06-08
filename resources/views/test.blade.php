@@ -16,12 +16,12 @@
             <button class="button-white">Reserve Now</button>
         </div>
         <div class="MainLandingPage background">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture1.png')}}" alt="">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture2.png')}}" alt="">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture3.png')}}" alt="">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture4.png')}}" alt="">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture5.png')}}" alt="">
-            <img class="reveal-img" src="{{ asset('images/rectangle_pictures/mainpage_rectangle_picture6.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture1.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture2.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture3.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture4.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture5.png')}}" alt="">
+            <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture6.png')}}" alt="">
         </div>
     </div>
     <div class="AboutSection">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="box-wrapper-quote">
-                <img src="{{ asset('images/image-with-quote.png')}}" alt="">
+                <img src="{{ asset('images/image-with-quote-new.png')}}" alt="">
                 <div class="box-wrapper-text">
                     <h3>We tend to make what we loved to, that's why
                         we created the best dish you never imagine</h3>
@@ -55,40 +55,40 @@
                 <h3>Our Menu</h3>
                 <div class="our_menu_grid_image">
                     <figure class="grid_item1">
-                        <img src="{{asset('images/our_menu/our_menu image1.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image1.png')}}" alt="">
                     </figure>
                     <figure class="grid_item2">
-                        <img src="{{asset('images/our_menu/our_menu image2.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image2.png')}}" alt="">
                     </figure>
                     <figure class="grid_item3">
-                        <img src="{{asset('images/our_menu/our_menu image3.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image3.png')}}" alt="">
                     </figure>
                     <figure class="grid_item4">
-                        <img src="{{asset('images/our_menu/our_menu image4.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image4.png')}}" alt="">
                     </figure>
                     <figure class="grid_item5">
-                        <img src="{{asset('images/our_menu/our_menu image5.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image5.png')}}" alt="">
                     </figure>
                     <figure class="grid_item6">
-                        <img src="{{asset('images/our_menu/our_menu image6.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image6.png')}}" alt="">
                     </figure>
                     <figure class="grid_item7">
-                        <img src="{{asset('images/our_menu/our_menu image7.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image7.png')}}" alt="">
                     </figure>
                     <figure class="grid_item8">
-                        <img src="{{asset('images/our_menu/our_menu image8.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image8.png')}}" alt="">
                     </figure>
                     <figure class="grid_item9">
-                        <img src="{{asset('images/our_menu/our_menu image9.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image9.png')}}" alt="">
                     </figure>
                     <figure class="grid_item10">
-                        <img src="{{asset('images/our_menu/our_menu image10.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image10.png')}}" alt="">
                     </figure>
                     <figure class="grid_item11">
-                        <img src="{{asset('images/our_menu/our_menu image11.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image11.png')}}" alt="">
                     </figure>
                     <figure class="grid_item12">
-                        <img src="{{asset('images/our_menu/our_menu image12.png')}}" alt="">
+                        <img src="{{asset('images/our_menu_new/our_menu image12.png')}}" alt="">
                     </figure>
                 </div>
                 <button class="button-inverted-green">Explore our Menu</button>

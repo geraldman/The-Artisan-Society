@@ -95,12 +95,34 @@ p{
 }
 /* Navigation Bar */
 
+.menubar{
+    display: auto;
+}
+
+.menubar img{
+    display: none;
+    filter: invert(1);
+    width: 25px;
+    height: auto;
+}
+
 .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrap-left{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 45px;
     width: 100%;
+}
+
+.menubar{
+    display: flex;
+    align-items: center;
 }
 
 .logo{
@@ -736,34 +758,44 @@ input[type=email] {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px) {
     h1 {
-        font-size: 5vw;
-        line-height: 5.5vw;
+        font-size: 9vw;
+        line-height: 9vw;
     }
 
-    h2 {
-        font-size: 4.5vw;
-        line-height: 5.5vw;
+    h2{
+        font-size: 30px;
     }
 
     h3 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 40px;
+        line-height: 38px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 22px;
     }
 
     .nav {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 10px;
         width: 95%;
     }
 
+    .wrap-left{
+        flex-direction: row;
+        gap: 15px;
+    }
+
     .nav-link {
+        display: none;
         flex-direction: column; /* Stack nav links */
         align-items: center;
         gap: 15px;
+    }
+
+    .menubar img{
+        display: block;
     }
 
     .body-margin {
@@ -786,15 +818,21 @@ input[type=email] {
         }
     }
 
+    .AboutSection .body-margin{
+        margin: auto 100px;
+    }
+
     .box-wrapper-description {
         flex-direction: column;
-        gap: 30px;
-        padding-top: 30px;
+        gap: 50px;
+        padding-top: 50px;
+        margin: auto 50px;
     }
 
     .box-description {
         width: 90%;
         margin: 0 auto;
+        gap: 20px;
     }
 
     .box-wrapper-quote {
@@ -803,12 +841,19 @@ input[type=email] {
         margin-top: 30px;
     }
 
+    .box-wrapper-quote h3{
+        margin-top: 40px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
     .box-wrapper-quote img {
-        width: 150px;
+        display: none;
     }
 
     .box-wrapper-text {
         max-width: 90%;
+        gap: 10px;
     }
 
     .our_menu_grid_image {
@@ -858,6 +903,11 @@ input[type=email] {
     .footer-references-hyperlink a {
         margin-left: 0;
         margin-bottom: 5px;
+    }
+
+    .contact-us{
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 
