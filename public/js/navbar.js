@@ -12,55 +12,46 @@ window.onscroll = function (){
 
 document.addEventListener('DOMContentLoaded', () => {
     const mainNavbar = document.getElementById('mainNavbar');
-    const menuBar = document.querySelector('.menubar img');
-    const navLink = document.querySelector('.nav-link');
+    const menuBarIcon = document.querySelector('.menubar img');
+    const navLinksContainer = document.querySelector('.nav-link');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
     // Function to check screen width
     const isMobile = () => window.innerWidth < 768;
 
     // Initially hide nav links on mobile
-    if (isMobile()) {
-        navLink.style.display = 'none';
-    }
-
-    menuBar.addEventListener('click', () => {
+    const handleNavbarState = () => {
         if (isMobile()) {
-            if (navLink.style.display === 'none' || navLink.style.display === '') {
-                navLink.style.display = 'flex'; // Show the nav links
-                // Optional: Adjust mainNavbar position if it covers content
-                // mainNavbar.style.position = 'absolute';
-                // mainNavbar.style.top = '0';
-            } else {
-                navLink.style.display = 'none'; // Hide the nav links
-                // Optional: Reset mainNavbar position
-                // mainNavbar.style.position = 'fixed';
-            }
+            // On mobile:
+            // Hide the regular nav links (they will be managed by the dropdown)
+            navLinksContainer.classList.add('hidden-mobile');
+            // Show the menu icon
+            menuBarIcon.classList.remove('hidden-mobile');
+            // Ensure dropdown is hidden initially
+            dropdownContent.classList.add('hidden');
+        } else {
+            // On desktop:
+            // Show the regular nav links
+            navLinksContainer.classList.remove('hidden-mobile');
+            // Hide the menu icon
+            menuBarIcon.classList.add('hidden-mobile');
+            // Ensure dropdown is hidden (not applicable on desktop, but good to reset)
+            dropdownContent.classList.add('hidden');
+        }
+    };
+
+    // Event listener for the menu icon click
+    menuBarIcon.addEventListener('click', () => {
+        if (isMobile()) {
+            // Toggle the 'hidden' class on the dropdown content
+            // This will make it appear/disappear based on CSS rules
+            dropdownContent.classList.toggle('hidden');
         }
     });
 
-    // Add a resize listener to handle transitions between mobile and desktop
-    window.addEventListener('resize', () => {
-        if (!isMobile()) {
-            navLink.style.display = 'flex'; // Always show nav links on desktop
-            // mainNavbar.style.position = 'fixed'; // Ensure navbar is fixed on desktop
-        } else {
-            // If resizing to mobile and links were visible, hide them
-            if (navLink.style.display === 'flex' && menuBar.style.display !== 'none') {
-                 navLink.style.display = 'none';
-            }
-        }
-        // Ensure menuBar image visibility based on screen width
-        if (isMobile()) {
-            menuBar.style.display = 'block';
-        } else {
-            menuBar.style.display = 'none';
-        }
-    });
+    // Initial setup when the page loads
+    handleNavbarState();
 
-    // Initial check for menuBar display on load
-    if (isMobile()) {
-        menuBar.style.display = 'block';
-    } else {
-        menuBar.style.display = 'none';
-    }
+    // Listen for window resize events to adjust navbar state
+    window.addEventListener('resize', handleNavbarState);
 });

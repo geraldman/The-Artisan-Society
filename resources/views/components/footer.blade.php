@@ -1,7 +1,7 @@
 <div class="body-margin">
     <div class="footer">
         <div class="logo">
-            <img src="{{ asset('images/The Artisan Society Logo (1) 1.svg')}}" alt="">
+            <img class="footer-logo" src="{{ asset('images/The Artisan Society Logo (1) 1.svg')}}" alt="">
         </div>
         <div class="footer-block-wrapper">
             <div class="footer-block-links-social">

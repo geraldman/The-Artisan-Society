@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loader-container">
+        <div id="loader"></div>
+        <div class="loading-text">Loading . . .</div>
+    </div>
     @include('components.navbar');
     <div class="MainlandingPage">
         <div class="MainLandingPage text-button">
@@ -22,6 +26,9 @@
             <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture4.png')}}" alt="">
             <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture5.png')}}" alt="">
             <img class="reveal-img" src="{{ asset('images/rectangle_pictures_new/mainpage_rectangle_picture6.png')}}" alt="">
+        </div>
+        <div class="background-mobile">
+            <img class="reveal-img-mobile" src="{{ asset('images/rectangle_pictures_new/mainpage-mobile.jpg')}}" alt="">
         </div>
     </div>
     <div class="AboutSection">
