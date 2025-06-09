@@ -62,7 +62,7 @@ body{
 
 @font-face{
     font-family: 'lovelace-bold';
-    src: url('../font/Lovelace-Bold-trial.ttf');
+    src: url('../font/Lovelace-Bold.ttf');
 }
 
 @font-face{
@@ -754,9 +754,13 @@ input[type=email] {
     }
 
     .nav{
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: row; /* Stack logo and nav links */
         gap: 15px;
+    }
+
+    .nav-link{
+        display: none;
     }
 
     .dropdown {
