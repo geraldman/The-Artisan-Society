@@ -131,19 +131,15 @@ p{
     flex-direction: column;
     position: absolute;
     background-color: #022D28;
-    min-width: 160px;
+    width: 200px;
+    max-width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2000;
     right: 0; /* Align to the right of the menu icon */
     top: 40px; /* Position below the menu icon */
-    padding: 12px 16px;
     border-radius: 5px;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transition */
-
-    /* Initially hidden by default, JS will toggle 'hidden' class */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none; /* Prevents interaction when hidden */
+    padding-bottom: 10px;
 }
 
 .dropdown-content.hidden {
@@ -154,10 +150,12 @@ p{
 
 .dropdown-content a {
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    font-family: 'aileron-light';
+    font-size: 19;
+    padding: 10px 15px;
 }
 
 .dropdown-content a:hover {
@@ -1056,12 +1054,6 @@ input[type=email] {
     .dropdown-content {
         top: 30px; /* Adjust dropdown position for small screens */
         min-width: 120px;
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .dropdown-content a {
-        padding: 8px 12px;
         font-size: 14px;
     }
 }

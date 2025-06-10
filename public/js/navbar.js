@@ -1,23 +1,31 @@
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function (){
     var currentScrollPos = window.pageYOffset;
+    
+    // Handling if dropdown accidentally opened when scrolling
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const isMobile = () => window.innerWidth < 992;
+    
     if(prevScrollpos > currentScrollPos){
         document.getElementById("mainNavbar").style.top = "0";
     }
     else{
         document.getElementById("mainNavbar").style.top = "-100px";
+        if(isMobile()){
+            dropdownContent.classList.add('hidden');
+        }
     }
     prevScrollpos = currentScrollPos;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     const mainNavbar = document.getElementById('mainNavbar');
-    const menuBarIcon = document.querySelector('.menubar img');
+    const menuBarIcon = document.querySelector('.dropdown img');
     const navLinksContainer = document.querySelector('.nav-link');
     const dropdownContent = document.querySelector('.dropdown-content');
 
     // Function to check screen width
-    const isMobile = () => window.innerWidth < 768;
+    const isMobile = () => window.innerWidth < 992;
 
     // Initially hide nav links on mobile
     const handleNavbarState = () => {
